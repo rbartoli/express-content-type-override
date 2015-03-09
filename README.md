@@ -1,5 +1,8 @@
 # Express Content-Type Override Middleware
 
+[![NPM Version](https://img.shields.io/npm/v/express-content-type-override.svg)](https://travis-ci.org/rbartoli/express-content-type-override)
+[![Travis build status](https://travis-ci.org/rbartoli/express-content-type-override.png?branch=master)](https://npmjs.org/package/express-content-type-override)
+
 An Express middleware to override the `content-type` header of the request.
 
 ## Installation
