@@ -8,7 +8,7 @@ An Express middleware to override the `content-type` header of the request.
 ## Installation
 
 ```bash
-$ npm install --save express-content-type-override  
+$ npm install --save express-content-type-override
 ```
 
 ## Usage
@@ -20,7 +20,8 @@ var bodyParser = require('body-parser');
 var registrationController = require('./controllers/registrationController');
 
 server.use( '/registration', contentTypeOverride({
-    contentType: 'application/x-www-form-urlencoded'
+    contentType: 'application/x-www-form-urlencoded',
+    charset: 'utf-8'
 }));
 server.use( bodyParser.json() );
 server.use( bodyParser.urlencoded({
@@ -33,8 +34,11 @@ app.listen( 3000 );
 ```
 
 ## Options
-**contentType**  
+**contentType**
 Specify the `content-type` mime-type you'd like to use. Defaults to `application/x-www-form-urlencoded`.
+
+**charset**
+If you need to specify charset as part of `content-type`. No default, will not be part of `content-type` if not set.
 
 ## License
 The MIT License (MIT)

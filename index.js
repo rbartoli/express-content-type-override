@@ -10,15 +10,19 @@
  */
 
 module.exports = function ( options ) {
+    var contentType;
     options = options || {};
-    options.contentType = options.contentType || 'application/x-www-form-urlencoded';
-    
+    contentType = options.contentType || 'application/x-www-form-urlencoded';
+    if (options.charset) {
+        contentType += ';charset=' + options.charset;
+    }
+
     return function( req, res, next ) {
-        if ( !req.headers['content-type'] || !req.headers['content-type'].match( options.contentType ) ) {
+        if ( !req.headers['content-type'] || !req.headers['content-type'].match( contentType ) ) {
             // Set the content-type header manually
-            req.headers['content-type'] = options.contentType;
+            req.headers['content-type'] = contentType;
         }
-        
+
         next();
     };
 };
