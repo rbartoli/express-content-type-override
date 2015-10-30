@@ -28,7 +28,7 @@ describe('contentTypeOverride()', function() {
         .expect('Content-Type', /json/)
         .expect(200, '{}', done);
     });
-    
+
     it('should set the content-type header to text/plain', function(done) {
         server = createServer( 'text/plain' );
         request(server)
@@ -36,14 +36,24 @@ describe('contentTypeOverride()', function() {
         .expect('Content-Type', /plain/)
         .expect(200, '{}', done);
     });
+
+    it('should be able to set a charset', function(done) {
+        server = createServer( 'application/json', 'utf-8' );
+        request(server)
+        .post('/')
+        .expect('Content-Type', /json/)
+        .expect('Content-Type', /utf-8/)
+        .expect(200, '{}', done);
+    });
 });
 
-function createServer( contentType ) {
+function createServer( contentType, charset ) {
     var express = require('express');
     var server = express();
 
     server.use('/', contentTypeOverride({
-        contentType: contentType
+        contentType: contentType,
+        charset: charset
     }));
 
     server.post('/', function(req, res) {
