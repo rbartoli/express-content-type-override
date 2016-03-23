@@ -1,10 +1,10 @@
 {
   "name": "express-content-type-override",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An Express middleware to override the `content-type` header of the request.",
   "author": "Riccardo Bartoli <info@rblab.com> (https://github.com/rbartoli/)",
   "scripts": {
-    "test": "mocha --require test/support/env --reporter spec --check-leaks --bail test/"
+    "test": "mocha test/"
   },
   "main": "index.js",
   "repository": {
@@ -17,7 +17,8 @@
   "keywords": [
     "express",
     "middleware",
-    "content-type"
+    "content-type",
+    "charset"
   ],
   "devDependencies": {
     "express": "^4.0.0",
