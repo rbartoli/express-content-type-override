@@ -19,18 +19,18 @@ var app = express();
 var bodyParser = require('body-parser');
 var registrationController = require('./controllers/registrationController');
 
-server.use( '/registration', contentTypeOverride({
+server.use('/registration', contentTypeOverride({
     contentType: 'application/x-www-form-urlencoded',
     charset: 'utf-8'
 }));
-server.use( bodyParser.json() );
-server.use( bodyParser.urlencoded({
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.post( '/registration', registrationController.index );
+app.post('/registration', registrationController.index);
 
-app.listen( 3000 );
+app.listen(3000);
 ```
 
 ## Options
@@ -43,7 +43,7 @@ If you need to specify charset as part of `content-type`. No default, will not b
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2015 Riccardo Bartoli
+Copyright (c) 2016 Riccardo Bartoli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
