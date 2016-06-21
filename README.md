@@ -1,7 +1,10 @@
 # Express Content-Type Override Middleware
 
-[![NPM Version](https://img.shields.io/npm/v/express-content-type-override.svg)](https://travis-ci.org/rbartoli/express-content-type-override)
-[![Travis build status](https://travis-ci.org/rbartoli/express-content-type-override.png?branch=master)](https://npmjs.org/package/express-content-type-override)
+[![Npm package version](https://img.shields.io/npm/v/express-content-type-override.svg?style=flat-square)](https://www.npmjs.com/package/express-content-type-override)
+[![Travis](https://img.shields.io/travis/rbartoli/express-content-type-override.svg?style=flat-square)](https://travis-ci.org/rbartoli/express-content-type-override)
+[![Npm dependencies](https://david-dm.org/rbartoli/express-content-type-override.svg)](https://www.npmjs.com/package/express-content-type-override)
+[![Npm total dowloads](https://img.shields.io/npm/dt/express-content-type-override.svg?style=flat-square)](https://www.npmjs.com/package/express-content-type-override)
+[![License](https://img.shields.io/github/license/rbartoli/express-content-type-override.svg?style=flat-square)](/LICENSE)
 
 An Express middleware to override the `content-type` header of the request.
 
