@@ -1,15 +1,14 @@
 module.exports = function (options) {
-    var contentType;
-    options = options || {};
-    options.contentType = options.contentType || 'application/x-www-form-urlencoded';
+    var o = options || {};
+    o.contentType = o.contentType || 'application/x-www-form-urlencoded';
     
-    if (options.charset) {
-        options.contentType += ';charset=' + options.charset;
+    if (o.charset) {
+        o.contentType += ';charset=' + o.charset;
     }
 
     return function(req, res, next) {
-        if (!req.headers['content-type'] || !req.headers['content-type'].match(options.contentType)) {
-            req.headers['content-type'] = options.contentType;
+        if (!req.headers['content-type'] || !req.headers['content-type'].match(o.contentType)) {
+            req.headers['content-type'] = o.contentType;
         }
 
         next();
