@@ -21,6 +21,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var registrationController = require('./controllers/registrationController');
+
 var options = {
     contentType: 'application/x-www-form-urlencoded',
     charset: 'utf-8'
@@ -32,7 +33,7 @@ server.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.post('/registration', registrationController.index);
+app.post('/registration', registrationController);
 
 app.listen(3000);
 ```
