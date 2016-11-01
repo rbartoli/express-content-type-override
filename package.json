@@ -4,7 +4,7 @@
   "description": "An Express middleware to override the `content-type` header of the request.",
   "main": "index.js",
   "license": "MIT",
-  "homepage": "https://github.com/rbartoli/express-boilerplate",
+  "homepage": "https://github.com/rbartoli/express-content-type-override",
   "repository": {
     "type": "git",
     "url": "https://github.com/rbartoli/express-content-type-override"
